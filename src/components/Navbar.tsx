@@ -1,33 +1,33 @@
-import { useRef } from "react";
+// import { useRef } from "react";
 import { logo } from "../assets";
 import { NAV_LIST } from "../constants";
 
-type Section = typeof NAV_LIST[number]['title'];
+// type Section = typeof NAV_LIST[number]['title'];
 
 const Navbar = () => {
-  const homeRef = useRef<HTMLElement | null>(null);
-  const aboutRef = useRef<HTMLElement | null>(null);
-  const skillsRef = useRef<HTMLElement | null>(null);
-  const portfolioRef = useRef<HTMLElement | null>(null);
+  // const homeRef = useRef<HTMLElement | null>(null);
+  // const aboutRef = useRef<HTMLElement | null>(null);
+  // const skillsRef = useRef<HTMLElement | null>(null);
+  // const portfolioRef = useRef<HTMLElement | null>(null);
 
-  const scrollToSection = (section : Section) => {
-    switch (section) {
-      case 'Home':
-        homeRef.current?.scrollIntoView({ behavior: 'smooth' });
-        break;
-      case 'About':
-        aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
-        break;
-      case 'Skills':
-        skillsRef.current?.scrollIntoView({ behavior: 'smooth' });
-        break;
-      case 'Portfolio':
-        portfolioRef.current?.scrollIntoView({ behavior: 'smooth' });
-        break;
-      default:
-        break;
-    }
-  };
+  // const scrollToSection = (section : Section) => {
+  //   switch (section) {
+  //     case 'Home':
+  //       homeRef.current?.scrollIntoView({ behavior: 'smooth' });
+  //       break;
+  //     case 'About':
+  //       aboutRef.current?.scrollIntoView({ behavior: 'smooth' });
+  //       break;
+  //     case 'Skills':
+  //       skillsRef.current?.scrollIntoView({ behavior: 'smooth' });
+  //       break;
+  //     case 'Portfolio':
+  //       portfolioRef.current?.scrollIntoView({ behavior: 'smooth' });
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
 
   return (
     <div className="min-w-full h-[120px] bg-white flex items-center justify-between px-[120px]">
@@ -37,7 +37,8 @@ const Navbar = () => {
       <div className="flex items-center">
         <nav className="flex flex-row gap-10">
           {NAV_LIST.map((item, index) => (
-            <button key={index} onClick={() => scrollToSection(item.title)} className="text-lg font-semibold hover:font-bold w-20">{item.title}</button>
+            // <a key={index} onClick={() => scrollToSection(item.title)} className="text-lg font-semibold hover:font-bold w-20">{item.title}</a>
+            <a key={index} href={item.id} className="text-lg font-semibold hover:font-bold w-20">{item.title}</a>
           ))}
         </nav>
       </div>
