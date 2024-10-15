@@ -1,6 +1,9 @@
 import { FaGithub } from "react-icons/fa";
 import { GoArrowUpRight } from "react-icons/go";
-import { PORTOFOLIO_LIST } from "../../constants";
+// import { PORTOFOLIO_LIST } from "../../constants";
+import { portfolio1 } from "../../assets";
+import portfolio2 from '../../assets/portfolio1.png';
+import portfolio3 from '../../../public/assets/portfolio1.png'
 
 const Portfolio = () => {
   return (
@@ -20,7 +23,7 @@ const Portfolio = () => {
             </a>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-5">
+        {/* <div className="grid grid-cols-3 gap-5">
           {PORTOFOLIO_LIST.map((item, index) => (
             <div key={index} className="flex flex-col shadow-lg">
               <div>
@@ -35,6 +38,82 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
+        </div> */}
+        <div className="grid grid-cols-3 gap-5">
+          <div className="flex flex-col shadow-lg">
+            <div>
+              <img src={portfolio1} alt="Asadelic" />
+            </div>
+            <div className="flex flex-col p-8">
+              <span className="font-bold text-2xl">Import from index src assets</span>
+              <span className="mt-3 text-base">tetxt</span>
+              <div className="group mt-6 flex flex-row items-center gap-2 w-fit">
+                <a href="" target="_blank"  className="font-semibold group-hover:font-bold">View In Github</a>  <GoArrowUpRight/>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col shadow-lg">
+            <div>
+              <img src={portfolio2} alt="Asadelic" />
+            </div>
+            <div className="flex flex-col p-8">
+              <span className="font-bold text-2xl">Import Manual inside file</span>
+              <span className="mt-3 text-base">tetxt</span>
+              <div className="group mt-6 flex flex-row items-center gap-2 w-fit">
+                <a href="" target="_blank"  className="font-semibold group-hover:font-bold">View In Github</a>  <GoArrowUpRight/>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col shadow-lg">
+            <div>
+              <img src={portfolio3} alt="Asadelic" />
+            </div>
+            <div className="flex flex-col p-8">
+              <span className="font-bold text-2xl">Import Manual from public</span>
+              <span className="mt-3 text-base">tetxt</span>
+              <div className="group mt-6 flex flex-row items-center gap-2 w-fit">
+                <a href="" target="_blank"  className="font-semibold group-hover:font-bold">View In Github</a>  <GoArrowUpRight/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-3 gap-5">
+          <div className="flex flex-col shadow-lg">
+            <div>
+              <img src="../../assets/portfolio1.png" alt="Asadelic" />
+            </div>
+            <div className="flex flex-col p-8">
+              <span className="font-bold text-2xl">Relative URL src assets</span>
+              <span className="mt-3 text-base">tetxt</span>
+              <div className="group mt-6 flex flex-row items-center gap-2 w-fit">
+                <a href="" target="_blank"  className="font-semibold group-hover:font-bold">View In Github</a>  <GoArrowUpRight/>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col shadow-lg">
+            <div>
+              <img src="/assets/portfolio1.png" alt="Asadelic" />
+            </div>
+            <div className="flex flex-col p-8">
+              <span className="font-bold text-2xl">Relative URL Public Folder</span>
+              <span className="mt-3 text-base">tetxt</span>
+              <div className="group mt-6 flex flex-row items-center gap-2 w-fit">
+                <a href="" target="_blank"  className="font-semibold group-hover:font-bold">View In Github</a>  <GoArrowUpRight/>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col shadow-lg">
+            <div>
+              <img src="../../../public/assets/portfolio1.png" alt="Asadelic" />
+            </div>
+            <div className="flex flex-col p-8">
+              <span className="font-bold text-2xl">Relative URL Public Folder FULL</span>
+              <span className="mt-3 text-base">tetxt</span>
+              <div className="group mt-6 flex flex-row items-center gap-2 w-fit">
+                <a href="" target="_blank"  className="font-semibold group-hover:font-bold">View In Github</a>  <GoArrowUpRight/>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
